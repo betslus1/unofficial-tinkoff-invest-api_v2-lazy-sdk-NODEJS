@@ -9,11 +9,6 @@ var api = new tinkoff_v2({
 	'token'   : process.argv[2]
 });
 
-
-
-//console.log(api.InstrumentsService);
-
-/*
 api.InstrumentsService.Etfs({}, function(err, response) {
 	if (err !== null){
 		console.log({err});
@@ -22,4 +17,3 @@ api.InstrumentsService.Etfs({}, function(err, response) {
 	
     console.log(response.instruments);
 });
-*/
