@@ -3,7 +3,6 @@
 
 var grpc        = require('@grpc/grpc-js');
 var protoLoader = require('@grpc/proto-loader');
-var copy        = require('fast-copy');
 var fs          = require('fs');
 var path        = require('path');
 
