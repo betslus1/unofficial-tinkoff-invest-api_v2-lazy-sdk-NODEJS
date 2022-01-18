@@ -1,0 +1,16 @@
+{
+  "name": "tinkoff-invest_v2_sdk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tinkoff.v2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.5.0",
+    "fast-copy": "^2.1.1",
+    "grpc-promise": "^1.4.0"
+  }
+}
