@@ -1,4 +1,4 @@
-# Неофициальный SDK для Tinkoff Invest API для nodejs
+# Неофициальный SDK для Tinkoff Invest APIv2 для nodejs
 
 Tinkoff Invest API — это интерфейс для взаимодействия с торговой платформой [Тинькофф Инвестиции](https://www.tinkoff.ru/invest/).
 
