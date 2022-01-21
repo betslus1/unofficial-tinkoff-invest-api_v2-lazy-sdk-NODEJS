@@ -45,9 +45,9 @@ API реализован на быстром, удобном и функцион
 
 Для того чтобы использовать Promise к названию объекта необходимо прибавить постфикс "Promise". 
 
-Например объект api.InstrumentServicePromise.ShareBy(opt) это версия с promise, а api.InstrumentService.ShareBy(opt, callback) это версия с callback.
+Например объект api.InstrumentServicePromise.ShareBy(json) это версия с promise, а api.InstrumentService.ShareBy(json, callback) это версия с callback.
 
-Список объектов и методов удобно смотреть через kreya, оттуда так же можно копировать примеры JSON запросов и проводить debug протокола. 
+Список объектов и методов удобно смотреть через kreya, оттуда так же можно копировать примеры JSON запросов и проводить debug протокола либо через официальную документацию https://tinkoff.github.io/investAPI/
 
 # Установка
 
