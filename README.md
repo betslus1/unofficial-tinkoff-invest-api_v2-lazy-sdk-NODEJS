@@ -43,7 +43,7 @@ API реализован на быстром, удобном и функцион
 
 # Особенности использования 
 
-* Для того чтобы использовать Promise к названию объекта необходимо прибавить постфикс "Promise". Например объект api.InstrumentServicePromise это версия с promise, а api.InstrumentService это версия с callback.
+* Для того чтобы использовать Promise к названию объекта необходимо прибавить постфикс "Promise". Например объект api.InstrumentServicePromise.ShareBy(opt) это версия с promise, а api.InstrumentService.ShareBy(opt, callback) это версия с callback.
 * Список объектов и методов удобно смотреть через kreya, оттуда так же можно копировать примеры JSON запросов и проводить debug протокола. 
 
 # Установка
