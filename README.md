@@ -47,12 +47,14 @@ API реализован на быстром, удобном и функцион
 
 Например объект api.InstrumentServicePromise.ShareBy(json) это версия с promise, а api.InstrumentService.ShareBy(json, callback) это версия с callback.
 
-Список объектов и методов удобно смотреть через kreya, оттуда так же можно копировать примеры JSON запросов и проводить debug протокола либо через официальную документацию https://tinkoff.github.io/investAPI/
+Список объектов и методов удобно смотреть через kreya (https://tinkoff.github.io/investAPI/grpc/), оттуда так же можно копировать примеры JSON запросов и проводить debug протокола либо через swagger https://tinkoff.github.io/investAPI/swagger-ui/#/
 
 # Установка
 
 * Копируете репозиторий в папку с проектом
-* в папке репозитория npm install
+* В папке репозитория npm install
+* Актуальные proto-контракты https://github.com/Tinkoff/investAPI/tree/main/src/docs/contracts
+
 
 # Сообщество
 
