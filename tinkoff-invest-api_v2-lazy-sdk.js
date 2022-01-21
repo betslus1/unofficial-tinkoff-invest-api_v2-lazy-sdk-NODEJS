@@ -36,6 +36,7 @@ module.exports = function (opt){
 
   var metadata          = new grpc.Metadata();
   metadata.add('Authorization', 'Bearer ' + this.token);
+  metadata.add('x-app-name', 'lazy-nodejs');
   this.metadataCreds = grpc.credentials.createFromMetadataGenerator(function(args, callback) {
    callback(null, metadata);
   });
