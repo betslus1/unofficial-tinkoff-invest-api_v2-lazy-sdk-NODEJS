@@ -55,7 +55,7 @@ API реализован на быстром, удобном и функцион
 
 * Копируете репозиторий в папку с проектом
 * В папке репозитория npm install
-* Актуальные proto-контракты https://github.com/Tinkoff/investAPI/tree/main/src/docs/contracts
+* Актуальные proto-контракты https://github.com/Tinkoff/investAPI/tree/main/src/docs/contracts загружаете в папку protos
 
 
 # Сообщество
