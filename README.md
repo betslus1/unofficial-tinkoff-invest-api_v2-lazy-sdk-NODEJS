@@ -2,25 +2,13 @@
 
 Tinkoff Invest API — это интерфейс для взаимодействия с торговой платформой [Тинькофф Инвестиции](https://www.tinkoff.ru/invest/).
 
-# Почему lazy?
-
-В SDK заранее не используется предгенерации классов из proto-файлов и описания статичных объектов и методов. 
-
-Генерация объектов поисходит каждый раз в момент подключения класса.
-
-Минус в производительности, при подключении класса требуются доли миллисекунд для иницализации и предгенерации классов и обьектов. Поэтому не рекомендуется многократно создавать экземпляр объекта (например делать "var api = new tinkoff_v2();" в цикле) в своем коде. Если такая необходимость все таки возникнет, то рекомендую создавать дубликаты обьекта библиотекой fast-copy. Если вы инициализируется библиотеку только один раз, на весь проект, проблемы не будет.
-
-Плюсом является простота обновления SDK и легкая адаптация под любой другой сервис.
-
-Для обновления SDK под новую версию достаточно загрузить новые proto-файлы в папку proto
-
-
 # Функциональные возможности
 * автоматическая генерация SDK на основе proto-файлов
 * поддержка Unary-request
 * поддержка Bidirectional streaming RPC
 * поддержка callback
 * поддержка promise (для unary-request)
+* автоматическое преобразование типов quotation/moneyValue/timestamp
 
 # Об API и протоколе
 API реализован на быстром, удобном и функциональном протоколе [gRPC](https://grpc.io/docs/).
@@ -43,9 +31,37 @@ API реализован на быстром, удобном и функцион
 
 # Особенности использования 
 
-Для того чтобы использовать Promise к названию объекта необходимо прибавить постфикс "Promise". 
+Поддерживаемые объекты api - promise с заменой quotation/moneuValue/timestamp
+ 'Instruments',
+ 'MarketData',
+ 'Operations',
+ 'Orders',
+ 'Sandbox',
+ 'Users',
+ 'StopOrders'
 
-Например объект api.InstrumentServicePromise.ShareBy(json) это версия с promise, а api.InstrumentService.ShareBy(json, callback) это версия с callback.
+Поддерживаемые объекты api - promise 
+ 'InstrumentsServicePromise',
+ 'MarketDataServicePromise',
+ 'MarketDataStreamServicePromise',
+ 'OperationsServicePromise',
+ 'OrdersStreamServicePromise',
+ 'OrdersServicePromise',
+ 'SandboxServicePromise',
+ 'UsersServicePromise',
+ 'StopOrdersServicePromise',
+
+Поддерживаемые объекты api - callback 
+  'InstrumentsService
+  'MarketDataService',  
+  'MarketDataStreamService',
+  'OperationsService',
+  'OrdersStreamService',
+  'OrdersService',
+  'SandboxService',
+  'UsersService',
+  'StopOrdersService',
+  
 
 Список объектов и методов удобно смотреть через:
 * kreya https://tinkoff.github.io/investAPI/grpc/, 
@@ -57,6 +73,18 @@ API реализован на быстром, удобном и функцион
 * В папке репозитория npm install
 * Актуальные proto-контракты https://github.com/Tinkoff/investAPI/tree/main/src/docs/contracts загружаете в папку protos
 
+
+# Почему lazy?
+
+В SDK заранее не используется предгенерации классов из proto-файлов и описания статичных объектов и методов. 
+
+Генерация объектов поисходит каждый раз в момент подключения класса.
+
+Минус в производительности, при подключении класса требуются доли миллисекунд для иницализации и предгенерации классов и обьектов. Поэтому не рекомендуется многократно создавать экземпляр объекта (например делать "var api = new tinkoff_v2();" в цикле) в своем коде. Если такая необходимость все таки возникнет, то рекомендую создавать дубликаты обьекта библиотекой fast-copy. Если вы инициализируется библиотеку только один раз, на весь проект, проблемы не будет.
+
+Плюсом является простота обновления SDK и легкая адаптация под любой другой сервис.
+
+Для обновления SDK под новую версию достаточно загрузить новые proto-файлы в папку proto
 
 # Сообщество
 
