@@ -5,15 +5,19 @@ if (process.argv[2] == null){
 	return;
 }
 var api = new tinkoff_v2({
-	'isDebug' : false,
 	'token'   : process.argv[2]
 });
 
-api.InstrumentsService.Etfs({}, function(err, response) {
-	if (err !== null){
-		console.log({err});
-		return;
+async function main(){
+	try {
+		
+		console.log(
+			await api.Instruments.Bonds({})
+		);
+		
+	}catch(err){
+		console.log(err);
 	}
 	
-    console.log(response.instruments);
-});
+}
+main();

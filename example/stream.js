@@ -1,4 +1,4 @@
-var tinkoff_v2 = require ('../tinkoff-invest-api_v2-lazy-sdk.js');
+var tinkoff_v2 = require ('../tinkoff_v2.js');
 
 var api = new tinkoff_v2({
 	'isDebug' : false,
