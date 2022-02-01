@@ -31,7 +31,7 @@ API реализован на быстром, удобном и функцион
 
 # Особенности использования 
 
-Поддерживаемые объекты api - promise с заменой quotation/moneuValue/timestamp
+Поддерживаемые объекты promise с автозаменой quotation/moneuValue/timestamp
  * 'Instruments',
  * 'MarketData',
  * 'Operations',
@@ -40,7 +40,7 @@ API реализован на быстром, удобном и функцион
  * 'Users',
  * 'StopOrders'
 
-Поддерживаемые объекты api - promise 
+Поддерживаемые объекты promise 
  * 'InstrumentsServicePromise',
  * 'MarketDataServicePromise',
  * 'OperationsServicePromise',
@@ -49,7 +49,7 @@ API реализован на быстром, удобном и функцион
  * 'UsersServicePromise',
  * 'StopOrdersServicePromise',
 
-Поддерживаемые объекты api - callback 
+Поддерживаемые объекты callback 
  * 'InstrumentsService
  *  'MarketDataService',  
  *  'MarketDataStreamService',
