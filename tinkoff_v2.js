@@ -182,7 +182,6 @@ module.exports = function (opt){
   }
 
   this.decodeResponse = function(resp, rules){
-    console.log(rules);
     for (let fieldName of Object.keys(resp) ){
 
       if (rules[fieldName] == 'Quotation'){
@@ -211,7 +210,6 @@ module.exports = function (opt){
   }
 
   this.encodeRequest = function(resp, rules){
-    console.log(rules);
     for (let fieldName of Object.keys(resp) ){
 
       if (rules[fieldName] == 'Quotation'){
