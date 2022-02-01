@@ -32,35 +32,35 @@ API реализован на быстром, удобном и функцион
 # Особенности использования 
 
 Поддерживаемые объекты api - promise с заменой quotation/moneuValue/timestamp
- 'Instruments',
- 'MarketData',
- 'Operations',
- 'Orders',
- 'Sandbox',
- 'Users',
- 'StopOrders'
+ * 'Instruments',
+ * 'MarketData',
+ * 'Operations',
+ * 'Orders',
+ * 'Sandbox',
+ * 'Users',
+ * 'StopOrders'
 
 Поддерживаемые объекты api - promise 
- 'InstrumentsServicePromise',
- 'MarketDataServicePromise',
- 'MarketDataStreamServicePromise',
- 'OperationsServicePromise',
- 'OrdersStreamServicePromise',
- 'OrdersServicePromise',
- 'SandboxServicePromise',
- 'UsersServicePromise',
- 'StopOrdersServicePromise',
+ * 'InstrumentsServicePromise',
+ * 'MarketDataServicePromise',
+ * 'MarketDataStreamServicePromise',
+ * 'OperationsServicePromise',
+ * 'OrdersStreamServicePromise',
+ * 'OrdersServicePromise',
+ * 'SandboxServicePromise',
+ * 'UsersServicePromise',
+ * 'StopOrdersServicePromise',
 
 Поддерживаемые объекты api - callback 
-  'InstrumentsService
-  'MarketDataService',  
-  'MarketDataStreamService',
-  'OperationsService',
-  'OrdersStreamService',
-  'OrdersService',
-  'SandboxService',
-  'UsersService',
-  'StopOrdersService',
+ * 'InstrumentsService
+ *  'MarketDataService',  
+ *  'MarketDataStreamService',
+ *  'OperationsService',
+ *  'OrdersStreamService',
+ *  'OrdersService',
+ *  'SandboxService',
+ *  'UsersService',
+ *  'StopOrdersService',
   
 
 Список объектов и методов удобно смотреть через:
