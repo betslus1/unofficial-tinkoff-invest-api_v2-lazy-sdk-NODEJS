@@ -43,9 +43,7 @@ API реализован на быстром, удобном и функцион
 Поддерживаемые объекты api - promise 
  * 'InstrumentsServicePromise',
  * 'MarketDataServicePromise',
- * 'MarketDataStreamServicePromise',
  * 'OperationsServicePromise',
- * 'OrdersStreamServicePromise',
  * 'OrdersServicePromise',
  * 'SandboxServicePromise',
  * 'UsersServicePromise',
@@ -62,6 +60,13 @@ API реализован на быстром, удобном и функцион
  *  'UsersService',
  *  'StopOrdersService',
   
+Так же пристуствуют функции:
+* api.quotation2decimal(quot)
+* api.decimal2quotation(quot)
+* api.timestamp2date(quot)
+* api.date2timestamp(quot)
+
+
 
 Список объектов и методов удобно смотреть через:
 * kreya https://tinkoff.github.io/investAPI/grpc/, 
