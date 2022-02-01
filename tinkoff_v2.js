@@ -200,7 +200,6 @@ module.exports = function (opt){
       }
 
       if(typeof resp[fieldName] == 'object' && resp[fieldName] != null){
-        console.log(fieldName, resp[fieldName]);
         resp[fieldName] = this.decodeResponse(resp[fieldName], rules);
 
       }
