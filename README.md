@@ -61,10 +61,10 @@ API реализован на быстром, удобном и функцион
  *  'StopOrdersService',
   
 Так же пристуствуют функции:
-* api.quotation2decimal(quot)
-* api.decimal2quotation(quot)
-* api.timestamp2date(quot)
-* api.date2timestamp(quot)
+* api.quotation2decimal(val)
+* api.decimal2quotation(val)
+* api.timestamp2date(val)
+* api.date2timestamp(val)
 
 
 
