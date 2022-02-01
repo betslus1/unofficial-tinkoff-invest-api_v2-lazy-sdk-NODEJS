@@ -31,7 +31,7 @@ API реализован на быстром, удобном и функцион
 
 # Особенности использования 
 
-Поддерживаемые объекты promise с автозаменой quotation/moneuValue/timestamp
+Поддерживаемые объекты promise с автозаменой quotation/moneyValue/timestamp
  * 'Instruments',
  * 'MarketData',
  * 'Operations',
