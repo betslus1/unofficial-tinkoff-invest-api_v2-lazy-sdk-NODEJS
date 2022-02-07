@@ -65,7 +65,8 @@ API реализован на быстром, удобном и функцион
 * api.decimal2quotation(val)
 * api.timestamp2date(val)
 * api.date2timestamp(val)
-
+* api.decodeResponse(resp, rules) //rules = {'price':'Quotation', ... }
+* api.encodeResponse(resp, rules) //rules = {'price':'Quotation', ... }
 
 
 Список объектов и методов удобно смотреть через:
