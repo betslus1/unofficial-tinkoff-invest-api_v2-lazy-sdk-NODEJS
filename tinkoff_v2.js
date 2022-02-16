@@ -164,10 +164,23 @@ module.exports = function (opt){
               return new Promise(function (resolve, reject) {
 
                 obj[serviceName][service](opt, function (err, response) {
-                  if (err !== null){
-                    reject(err);
+                 if (err !== null){
+                    if (err!==undefined && err.metadata != undefined && err.metadata.internalRepr !=undefined){
+                      var internal = err.metadata.internalRepr;
+                      console.log({internal});
+                      reject(err + 
+                        ' \n tracking-id: ' + internal.get('x-tracking-id') + 
+                        ' \n message: "'+ internal.get('message') + '"' +
+                        ' \n date: "'+ internal.get('date') + '"' +
+                        ' \n x-ratelimit-limit: "'+ internal.get('x-ratelimit-limit') + '"' +
+                        ' \n x-ratelimit-remaining: "'+ internal.get('x-ratelimit-remaining') + '"' +
+                        ' \n x-ratelimit-reset: "'+ internal.get('x-ratelimit-reset') + '"' 
+                      );
+                    }else{
+                      reject(err);
+                    }
                   }
-
+                  
                   if (response !== undefined) {
                     response = obj.decodeResponse(response, obj.types[this.methodDefinition.path]['responseType']);            
                     resolve(response);
