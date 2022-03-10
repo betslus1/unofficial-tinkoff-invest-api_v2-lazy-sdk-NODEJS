@@ -295,7 +295,7 @@ module.exports = function (opt){
     if (obj == null){
       return null;
     }
-    return obj.units + obj.nano/1000000000 + obj.currency;
+    return obj.units + obj.nano/1000000000 + ' ' + obj.currency;
   }
 
   this.decimal2money = function (dec){
