@@ -209,14 +209,25 @@ module.exports = function (opt){
 
   this.decodeResponse = function(resp, rules){
     for (let fieldName of Object.keys(resp) ){
-
       if (rules[fieldName] == 'Quotation'){
-        resp[fieldName] = this.quotation2decimal(resp[fieldName]);
+        if (Array.isArray(resp[fieldName])){
+          for (let i in resp[fieldName]){
+            resp[fieldName][i] = this.quotation2decimal(resp[fieldName][i]);
+          }
+        }else{
+          resp[fieldName] = this.quotation2decimal(resp[fieldName]);
+        }
         continue;
       }
 
       if (rules[fieldName] == 'MoneyValue'){
-        resp[fieldName] = this.quotation2decimal(resp[fieldName]);
+        if (Array.isArray(resp[fieldName])){
+          for (let i in resp[fieldName]){
+            resp[fieldName][i] = this.money2decimal(resp[fieldName][i]);
+          }
+        }else{
+          resp[fieldName] = this.money2decimal(resp[fieldName]);
+        }
         continue;
       }
 
@@ -225,9 +236,10 @@ module.exports = function (opt){
         continue;
       }
 
+      
+
       if(typeof resp[fieldName] == 'object' && resp[fieldName] != null){
         resp[fieldName] = this.decodeResponse(resp[fieldName], rules);
-
       }
     }
 
@@ -243,7 +255,7 @@ module.exports = function (opt){
       }
 
       if (rules[fieldName] == 'MoneyValue'){
-        resp[fieldName] = this.decimal2quotation(resp[fieldName]);
+        resp[fieldName] = this.decimal2money(resp[fieldName]);
         continue;
       }
 
@@ -278,6 +290,25 @@ module.exports = function (opt){
       'nanos': (dec - Math.floor(dec)) * 1000000000,
     };
   }
+
+  this.money2decimal = function (obj){
+    if (obj == null){
+      return null;
+    }
+    return obj.units + obj.nano/1000000000 + obj.currency;
+  }
+
+  this.decimal2money = function (dec){
+    if (dec == null){
+      return null;
+    }
+    return {
+      'units' : Math.floor(dec),
+      'nanos': (dec - Math.floor(dec)) * 1000000000,
+      'currency':'' //TODO: fix it
+    };
+  }
+
 
   this.timestamp2Date = function (obj){
     if (obj == null){
