@@ -43,7 +43,32 @@ var api = new tinkoff_v2({'token'   : "your token"});
 	});
 	console.log(operations);
 )();
+
+/*
+response
+
+{
+  operations: [
+    {
+      trades: [],
+      id: '2462795973',
+      parent_operation_id: '386692157970',
+      currency: 'usd',
+      payment: '-0.01 usd',
+      price: '0 usd',
+      state: 'OPERATION_STATE_EXECUTED',
+      quantity: 0,
+      quantity_rest: 0,
+      figi: 'BBG00HTN2CQ3',
+      instrument_type: 'share',
+      date: 2022-03-11T15:28:37.174Z,
+      type: 'Удержание комиссии за операцию',
+      operation_type: 'OPERATION_TYPE_BROKER_FEE'
+    },
+}
+
 ```
+
 
 * Остальные примеры находятся в папке example
 * node example/unaryPromise.js token
