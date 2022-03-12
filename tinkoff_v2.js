@@ -210,7 +210,9 @@ module.exports = function (opt){
   }
 
   this.decodeResponse = function(resp, rules){
+
     for (let fieldName of Object.keys(resp) ){
+
       if (rules[fieldName] == 'Quotation'){
         if (Array.isArray(resp[fieldName])){
           for (let i in resp[fieldName]){
@@ -233,7 +235,7 @@ module.exports = function (opt){
         continue;
       }
 
-      if (rules[fieldName] == 'google.protobuf.Timestamp'){
+      if (rules[fieldName] == 'google.protobuf.Timestamp' || fieldName == 'date_time'){
         resp[fieldName] = this.timestamp2Date(resp[fieldName]);
         continue;
       }
