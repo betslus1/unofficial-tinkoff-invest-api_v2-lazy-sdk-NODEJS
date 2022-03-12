@@ -45,8 +45,6 @@ var api = new tinkoff_v2({'token'   : "your token"});
 )();
 
 /*
-response
-
 {
   operations: [
     {
@@ -66,7 +64,7 @@ response
       operation_type: 'OPERATION_TYPE_BROKER_FEE'
     },
 }
-
+*/
 ```
 
 
