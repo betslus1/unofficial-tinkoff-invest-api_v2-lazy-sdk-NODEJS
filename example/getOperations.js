@@ -7,5 +7,4 @@ let operations = await api.Operations.GetOperations({
 	'state' : "OPERATION_STATE_EXECUTED",
 	'from'  : from,
 	'to'    : to,
-	'figi'  : opt.figi,
 });
