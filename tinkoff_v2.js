@@ -163,6 +163,8 @@ module.exports = function (opt){
             this[serviceNameShort][service] = function (opt) {
               return new Promise(function (resolve, reject) {
 
+                obj.encodeRequest(opt, obj.types[obj[serviceName][service]['path']]['requestType']);
+
                 obj[serviceName][service](opt, function (err, response) {
                  if (err !== null){
                     if (err!==undefined && err.metadata != undefined && err.metadata.internalRepr !=undefined){
