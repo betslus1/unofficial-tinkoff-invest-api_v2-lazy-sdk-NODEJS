@@ -62,7 +62,8 @@ var api = new tinkoff_v2({'token'   : "your token"});
       date: 2022-03-11T15:28:37.174Z,
       type: 'Удержание комиссии за операцию',
       operation_type: 'OPERATION_TYPE_BROKER_FEE'
-    },
+    }
+    ]
 }
 */
 ```
