@@ -63,7 +63,7 @@ var api = new tinkoff_v2({'token'   : "your token"});
       type: 'Удержание комиссии за операцию',
       operation_type: 'OPERATION_TYPE_BROKER_FEE'
     }
-    ]
+  ]
 }
 */
 ```
