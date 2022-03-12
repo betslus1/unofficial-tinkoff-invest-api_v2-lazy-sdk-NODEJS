@@ -26,7 +26,26 @@ API реализован на быстром, удобном и функцион
 
 # Примеры работы
 
-* Примеры находятся в папке example
+```
+var tinkoff_v2 = require ('../tinkoff_v2.js');
+var api = new tinkoff_v2({'token'   : "your token"});
+
+(async function main(){	
+	let from = new Date();
+	let to   = new Date();
+	to.setHours(to.getHours() - 24);
+	
+	let operations = await api.Operations.GetOperations({
+		'account_id' : "your account id",
+		'state' : "OPERATION_STATE_EXECUTED",
+		'from'  : from,
+		'to'    : to,
+	});
+	console.log(operations);
+)();
+```
+
+* Остальные примеры находятся в папке example
 * node example/unaryPromise.js token
 
 # Особенности использования 
