@@ -163,13 +163,17 @@ module.exports = function (opt){
             this[serviceNameShort][service] = function (opt) {
               return new Promise(function (resolve, reject) {
 
-                obj.encodeRequest(opt, obj.types[obj[serviceName][service]['path']]['requestType']);
+                if (opt.isEncodeRequest != false){
+                  obj.encodeRequest(opt, obj.types[obj[serviceName][service]['path']]['requestType']);
+                }
 
                 obj[serviceName][service](opt, function (err, response) {
                  if (err !== null){
                     if (err!==undefined && err.metadata != undefined && err.metadata.internalRepr !=undefined){
                       var internal = err.metadata.internalRepr;
-                      console.log({internal});
+                      if (this.isDebug == true){
+                        console.log({internal});
+                      }
                       reject(err + 
                         ' \n tracking-id: ' + internal.get('x-tracking-id') + 
                         ' \n message: "'+ internal.get('message') + '"' +
