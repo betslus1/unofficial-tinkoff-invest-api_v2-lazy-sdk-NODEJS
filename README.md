@@ -138,3 +138,5 @@ var api = new tinkoff_v2({'token'   : "your token"});
 # Сообщество
 
 [Telegram-чат](https://t.me/joinchat/VaW05CDzcSdsPULM)
+
+[Альтернативная неофициальная библиотека nodejs-typescript](https://github.com/mtvkand/invest-nodejs-grpc-sdk)
