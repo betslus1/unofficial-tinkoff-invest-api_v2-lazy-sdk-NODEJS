@@ -214,7 +214,10 @@ module.exports = function (opt){
   }
 
   this.decodeResponse = function(resp, rules){
-
+    if (resp == null || resp == undefined){
+      return null;
+    }
+    
     for (let fieldName of Object.keys(resp) ){
 
       if (rules[fieldName] == 'Quotation'){
