@@ -39,11 +39,11 @@ setTimeout(async function(){
 	let req = {
 		"account_id":"2088918905",
 		"quantity":"1",
-		"price":840,
+		"price":9,
 		"direction":"ORDER_DIRECTION_BUY",
 		"order_type":"ORDER_TYPE_LIMIT",
 		"order_id":"ord_"+now,
-		"figi":"BBG00R0Z4YW8"
+		"figi":"BBG00HTN2CQ3"
 	};
 
 	console.log(req);

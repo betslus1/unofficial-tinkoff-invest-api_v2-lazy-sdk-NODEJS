@@ -4,7 +4,7 @@ var api = new tinkoff_v2({'token'   : process.argv[2]});
 (async function main(){	
 	let from = new Date();
 	let to   = new Date();
-	to.setHours(to.getHours() - 24);
+	from.setHours(from.getHours() - 24);
 	
 	let operations = await api.Operations.GetOperations({
 		'account_id' : "12345",
@@ -13,6 +13,6 @@ var api = new tinkoff_v2({'token'   : process.argv[2]});
 		'to'    : to,
 	});
 	console.log(operations);
-)();
+})();
 
 	

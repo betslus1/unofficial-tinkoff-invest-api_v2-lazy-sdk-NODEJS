@@ -21,8 +21,8 @@ call.on('end', function() {
 }); 
 
 
+
 setTimeout(function(){
 	console.log('close first');
 	call.cancel();
 }, 1000);
-
