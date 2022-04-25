@@ -163,9 +163,18 @@ module.exports = function (opt){
             this[serviceNameShort][service] = function (opt) {
               return new Promise(function (resolve, reject) {
 
+
+                if (opt.rules != undefined){
+                  obj.types[obj[serviceName][service]['path']]['requestType'] = opt.rules;
+                  delete opt.rules;
+                }
+
                 if (opt.isEncodeRequest != false){
                   obj.encodeRequest(opt, obj.types[obj[serviceName][service]['path']]['requestType']);
+                  delete opt.isEncodeRequest;
                 }
+
+
 
                 obj[serviceName][service](opt, function (err, response) {
                  if (err !== null){
@@ -276,9 +285,8 @@ module.exports = function (opt){
       }
 
       if(typeof resp[fieldName] == 'object' && resp[fieldName] != null){
-        console.log(fieldName, resp[fieldName]);
+        // console.log(resp[fieldName], rules[fieldName], rules ); //uncomment it for debug encodeRequest
         resp[fieldName] = this.encodeRequest(resp[fieldName], rules);
-
       }
     }
 
