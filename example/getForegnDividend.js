@@ -27,5 +27,5 @@ var api = new tinkoff_v2({'token'   : process.argv[2]});
       'dividend_gross'   : 'Quotation',
       'tax'   : 'Quotation',
       'dividend_amount'   : 'Quotation',
-  });
+  }));
 })();
