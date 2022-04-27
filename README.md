@@ -31,20 +31,17 @@ var tinkoff_v2 = require ('../tinkoff_v2.js');
 var api = new tinkoff_v2({'token' : "your token", 'appName' : "your app name"});
 
 (async function main(){	
-	let from = new Date();
-	let to   = new Date();
-	to.setHours(to.getHours() - 24);
-	
 	let operations = await api.Operations.GetOperations({
 		'account_id' : "your account id",
 		'state' : "OPERATION_STATE_EXECUTED",
-		'from'  : from,
-		'to'    : to,
+		'from'  : (new Date('2022-04-26'),
+		'to'    : (new Date('2022-04-27'),
 	});
 	console.log(operations);
-)();
+})();
 
 /*
+output:
 {
   operations: [
     {
