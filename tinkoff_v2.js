@@ -19,6 +19,11 @@ module.exports = function (opt){
     this.isDebug = opt.isDebug;
   }
 
+  this.appName = opt.appName;
+  if (this.appName === undefined){
+    this.appName = 'lazy-nodejs'
+  }
+
   this.isDebug  = false;
   this.url      = 'invest-public-api.tinkoff.ru:443';
   this.protoDir = __dirname + '/protos/';
@@ -39,7 +44,7 @@ module.exports = function (opt){
 
   var metadata          = new grpc.Metadata();
   metadata.add('Authorization', 'Bearer ' + this.token);
-  metadata.add('x-app-name', 'lazy-nodejs');
+  metadata.add('x-app-name', this.appName);
   this.metadataCreds = grpc.credentials.createFromMetadataGenerator(function(args, callback) {
    callback(null, metadata);
   });
