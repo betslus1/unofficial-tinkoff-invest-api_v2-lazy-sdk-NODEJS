@@ -28,7 +28,7 @@ API реализован на быстром, удобном и функцион
 
 ```
 var tinkoff_v2 = require ('../tinkoff_v2.js');
-var api = new tinkoff_v2({'token'   : "your token"});
+var api = new tinkoff_v2({'token' : "your token", 'appName' : "your app name"});
 
 (async function main(){	
 	let from = new Date();
