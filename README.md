@@ -34,8 +34,8 @@ var api = new tinkoff_v2({'token' : "your token", 'appName' : "your app name"});
 	let operations = await api.Operations.GetOperations({
 		'account_id' : "your account id",
 		'state' : "OPERATION_STATE_EXECUTED",
-		'from'  : (new Date('2022-04-26'),
-		'to'    : (new Date('2022-04-27'),
+		'from'  : (new Date('2022-04-26')),
+		'to'    : (new Date('2022-04-27')),
 	});
 	console.log(operations);
 })();
