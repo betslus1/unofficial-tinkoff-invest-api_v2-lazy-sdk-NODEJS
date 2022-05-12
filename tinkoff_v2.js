@@ -322,14 +322,16 @@ module.exports = function (opt){
     return obj.units + obj.nano/1000000000 + ' ' + obj.currency;
   }
 
-  this.decimal2money = function (dec){
-    if (dec == null){
+  this.decimal2money = function (money){
+    if (money == null){
       return null;
     }
+    var [dec,currency] = money.split(' ');
+
     return {
       'units' : Math.floor(dec),
-      'nanos': (dec - Math.floor(dec)) * 1000000000,
-      'currency':'' //TODO: fix it
+      'nanos' : (dec - Math.floor(dec)) * 1000000000,
+      'currency' : currency
     };
   }
 
