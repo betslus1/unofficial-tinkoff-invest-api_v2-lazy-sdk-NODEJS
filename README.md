@@ -80,6 +80,11 @@ output:
  * 'Users',
  * 'StopOrders'
 
+Дополнительные опции методов группы
+isDebug [true|false] - включаем дебаг (по умолчанию выключено)
+isEncodeRequest [true|false] - включаем преобразование типов при отправке запросов (по умолчанию включено)
+rules [arr] - Собственные правила преобразования типов
+
 Поддерживаемые объекты promise 
  * 'InstrumentsServicePromise',
  * 'MarketDataServicePromise',
