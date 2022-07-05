@@ -10,6 +10,14 @@ Tinkoff Invest API — это интерфейс для взаимодейств
 * поддержка promise (для unary-request)
 * автоматическое преобразование типов quotation/moneyValue/timestamp
 
+# Установка
+
+```
+git clone --recurse-submodules git@github.com:betslus1/bestbot.git
+cd unofficial-tinkoff-invest-api_v2-lazy-sdk-NODEJS
+npm i
+```
+
 # Об API и протоколе
 API реализован на быстром, удобном и функциональном протоколе [gRPC](https://grpc.io/docs/).
 
@@ -118,17 +126,6 @@ output:
 * kreya https://tinkoff.github.io/investAPI/grpc/, 
 * swagger https://tinkoff.github.io/investAPI/swagger-ui/#/
 
-# Установка
-
-```
-git clone --recurse-submodules git@github.com:betslus1/bestbot.git
-cd unofficial-tinkoff-invest-api_v2-lazy-sdk-NODEJS
-npm i
-```
-
-
-* Копируете репозиторий в папку с проектом
-* В папке репозитория npm install
 
 
 # Почему lazy?
