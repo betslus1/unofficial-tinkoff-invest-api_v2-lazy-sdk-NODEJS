@@ -120,9 +120,13 @@ output:
 
 # Установка
 
+`git clone --recurse-submodules git@github.com:betslus1/bestbot.git`
+`cd unofficial-tinkoff-invest-api_v2-lazy-sdk-NODEJS`
+`npm i`
+
+
 * Копируете репозиторий в папку с проектом
 * В папке репозитория npm install
-* Актуальные proto-контракты https://github.com/Tinkoff/investAPI/tree/main/src/docs/contracts загружаете в папку protos
 
 
 # Почему lazy?
