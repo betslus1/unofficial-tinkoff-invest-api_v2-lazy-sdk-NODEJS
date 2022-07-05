@@ -120,11 +120,11 @@ output:
 
 # Установка
 
-`git clone --recurse-submodules git@github.com:betslus1/bestbot.git
-
+```
+git clone --recurse-submodules git@github.com:betslus1/bestbot.git
 cd unofficial-tinkoff-invest-api_v2-lazy-sdk-NODEJS
-
-npm i`
+npm i
+```
 
 
 * Копируете репозиторий в папку с проектом
