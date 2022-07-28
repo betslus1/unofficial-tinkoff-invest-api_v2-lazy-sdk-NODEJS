@@ -19,6 +19,14 @@ npm i
 git submodule update --remote --merge
 ```
 
+
+# Обновление протофайлов
+
+```
+cd unofficial-tinkoff-invest-api_v2-lazy-sdk-NODEJS
+git submodule update --remote --merge
+```
+
 # Об API и протоколе
 API реализован на быстром, удобном и функциональном протоколе [gRPC](https://grpc.io/docs/).
 
