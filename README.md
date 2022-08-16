@@ -13,7 +13,7 @@ Tinkoff Invest API — это интерфейс для взаимодейств
 # Установка
 
 ```
-git clone --recurse-submodules git@github.com:betslus1/unofficial-tinkoff-invest-api_v2-lazy-sdk-NODEJS.git
+git clone --recurse-submodules https://github.com/betslus1/unofficial-tinkoff-invest-api_v2-lazy-sdk-NODEJS.git
 cd unofficial-tinkoff-invest-api_v2-lazy-sdk-NODEJS
 npm i
 git submodule update --remote --merge
