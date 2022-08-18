@@ -157,4 +157,4 @@ output:
 
 # Коннектор к tradingView
 
-https://github.com/betslus1/connector_tradingview/blob/main/README.md
+https://github.com/betslus1/connector_tradingview
