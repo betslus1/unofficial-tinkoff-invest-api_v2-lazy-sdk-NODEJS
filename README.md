@@ -154,3 +154,6 @@ output:
 [Telegram-чат](https://t.me/joinchat/VaW05CDzcSdsPULM)
 
 [Альтернативная неофициальная библиотека nodejs-typescript](https://github.com/mtvkand/invest-nodejs-grpc-sdk)
+
+#Коннектор к tradingView
+https://github.com/betslus1/connector_tradingview/blob/main/README.md
