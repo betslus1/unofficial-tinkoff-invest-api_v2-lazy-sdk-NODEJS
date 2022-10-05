@@ -311,7 +311,7 @@ module.exports = function (opt){
     }
     return {
       'units' : Math.floor(dec),
-      'nanos': (dec - Math.floor(dec)) * 1000000000,
+      'nano': (dec - Math.floor(dec)) * 1000000000,
     };
   }
 
@@ -330,7 +330,7 @@ module.exports = function (opt){
 
     return {
       'units' : Math.floor(dec),
-      'nanos' : (dec - Math.floor(dec)) * 1000000000,
+      'nano' : (dec - Math.floor(dec)) * 1000000000,
       'currency' : currency
     };
   }
