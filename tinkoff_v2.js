@@ -19,6 +19,10 @@ module.exports = function (opt){
     this.isDebug = opt.isDebug;
   }
 
+  if (opt.connOpt !== undefined){
+    this.connOpt = opt.connOpt;
+  }
+
   this.appName = opt.appName;
   if (this.appName === undefined){
     this.appName = 'lazy-nodejs'
@@ -65,9 +69,11 @@ module.exports = function (opt){
             } else {
               let pathDir = name.split('/');
               let filename = pathDir[pathDir.length - 1];
-              let strategyName = filename.split('.');
-              strategyName = strategyName[0];
-                files_.push(strategyName);
+              let name = filename.split('.');
+              name = name[0];
+              if(name.length > 0){
+                files_.push(name);                
+              }
             }
         }
         return files_;
@@ -110,7 +116,7 @@ module.exports = function (opt){
       for (let serviceName of Object.keys(this.contracts[pn])){
         if (serviceName.indexOf('Service') > 0){
 
-          this[serviceName]    = new this.contracts[pn][serviceName](this.url, this.ssl_creds);
+          this[serviceName]    = new this.contracts[pn][serviceName](this.url, this.ssl_creds, this.connOpt ?? {});
           var obj = this;
           var pn_local = copy(pn);
 
