@@ -69,10 +69,9 @@ module.exports = function (opt){
             } else {
               let pathDir = name.split('/');
               let filename = pathDir[pathDir.length - 1];
-              let name = filename.split('.');
-              name = name[0];
-              if(name.length > 0){
-                files_.push(name);                
+              let [protoName, ext] = filename.split('.');
+              if(protoName.length > 0){
+                files_.push(protoName);                
               }
             }
         }
