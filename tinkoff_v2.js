@@ -24,6 +24,10 @@ module.exports = function (opt){
     this.isDebug = opt.isDebug;
   }
 
+  if (opt.connOpt !== undefined){
+    this.connOpt = opt.connOpt;
+  }
+
   this.appName = opt.appName;
   if (this.appName === undefined){
     this.appName = 'lazy-nodejs'
@@ -70,9 +74,10 @@ module.exports = function (opt){
             } else {
               let pathDir = name.split('/');
               let filename = pathDir[pathDir.length - 1];
-              let strategyName = filename.split('.');
-              strategyName = strategyName[0];
-                files_.push(strategyName);
+              let [protoName, ext] = filename.split('.');
+              if(protoName.length > 0){
+                files_.push(protoName);                
+              }
             }
         }
         return files_;
@@ -316,7 +321,7 @@ module.exports = function (opt){
     }
     return {
       'units' : Math.floor(dec),
-      'nanos': (dec - Math.floor(dec)) * 1000000000,
+      'nano': (dec - Math.floor(dec)) * 1000000000,
     };
   }
 
@@ -335,7 +340,7 @@ module.exports = function (opt){
 
     return {
       'units' : Math.floor(dec),
-      'nanos' : (dec - Math.floor(dec)) * 1000000000,
+      'nano' : (dec - Math.floor(dec)) * 1000000000,
       'currency' : currency
     };
   }

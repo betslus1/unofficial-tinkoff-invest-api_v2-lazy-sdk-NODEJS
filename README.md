@@ -13,7 +13,7 @@ Tinkoff Invest API — это интерфейс для взаимодейств
 # Установка
 
 ```
-git clone --recurse-submodules git@github.com:betslus1/unofficial-tinkoff-invest-api_v2-lazy-sdk-NODEJS.git
+git clone --recurse-submodules https://github.com/betslus1/unofficial-tinkoff-invest-api_v2-lazy-sdk-NODEJS.git
 cd unofficial-tinkoff-invest-api_v2-lazy-sdk-NODEJS
 npm i
 git submodule update --remote --merge
@@ -45,7 +45,16 @@ API реализован на быстром, удобном и функцион
 
 ```
 var tinkoff_v2 = require ('../tinkoff_v2.js');
-var api = new tinkoff_v2({'token' : "your token", 'appName' : "your app name"});
+var api = new tinkoff_v2({
+	'token' : "your token", 
+	'appName' : "your app name", 
+	'connOpt' : {
+	    'grpc.keepalive_time_ms' : 30000,
+	    'grpc.keepalive_timeout_ms' : 30000,
+	    'grpc.min_reconnect_backoff_ms': 1000,
+	    'grpc.max_reconnect_backoff_ms': 10000,
+	}
+});
 
 (async function main(){	
 	let operations = await api.Operations.GetOperations({
@@ -154,3 +163,4 @@ output:
 [Telegram-чат](https://t.me/joinchat/VaW05CDzcSdsPULM)
 
 [Альтернативная неофициальная библиотека nodejs-typescript](https://github.com/mtvkand/invest-nodejs-grpc-sdk)
+
