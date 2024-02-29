@@ -14,7 +14,12 @@ module.exports = function (opt){
   this.token = opt.token;
   if (this.token === undefined){
     throw 'Не указан токен';
+  }  
+
+  if (opt.connOpt !== undefined){
+    this.connOpt = opt.connOpt;
   }
+
   if(opt.isDebug !== undefined){
     this.isDebug = opt.isDebug;
   }
@@ -110,7 +115,7 @@ module.exports = function (opt){
       for (let serviceName of Object.keys(this.contracts[pn])){
         if (serviceName.indexOf('Service') > 0){
 
-          this[serviceName]    = new this.contracts[pn][serviceName](this.url, this.ssl_creds);
+          this[serviceName]    = new this.contracts[pn][serviceName](this.url, this.ssl_creds, this.connOpt ?? {});
           var obj = this;
           var pn_local = copy(pn);
 
